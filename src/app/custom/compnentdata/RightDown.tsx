@@ -30,7 +30,7 @@ const RightDown = ({ param }: IPARAMS) => {
         fetchData();
     }, []);
     return (
-        <div className='flex flex-col  space-x-4 mt-10 bg-gray-100 p-1 h-64'>
+        <div className='flex flex-col  space-x-4 mt-10  p-1 h-64 ml-4 space-y-4'>
 
             <div className='flex items-center space-x-4'>
                 <div className='flex items-center'>
@@ -49,24 +49,23 @@ const RightDown = ({ param }: IPARAMS) => {
             <Tabs defaultValue="account" className="w-[400px]">
                 <TabsList className="">
                     <TabsTrigger value="account" >
-                        <p className='bg-gray-200 px-3 py-2 rounded-xl'>
+                        <p >
                             Test Case 1
                         </p>
                     </TabsTrigger>
                     <TabsTrigger value="password">
-                        <p className='bg-gray-200 px-3 py-2 rounded-xl'>
+                        <p >
                             Test Case 2
                         </p>
                     </TabsTrigger>
                 </TabsList>
                 <TabsContent value="account">
                     <div className='flex space-y-5 flex-col'>
-                        <p>Inputs : </p>
                         <div className='flex space-x-3 tracking-wide' >
                             {
                                 data?.Inputs ? (
                                     <>
-                                        <p>Nums :- </p>
+                                        <p>Test Case :- </p>
                                         {
                                             data?.Inputs
                                         }
@@ -87,12 +86,12 @@ const RightDown = ({ param }: IPARAMS) => {
                 </TabsContent>
                 <TabsContent value="password">
                     <div className='flex space-y-5 flex-col'>
-                        <p>Inputs : </p>
+
                         <div className='flex space-x-3 tracking-wide' >
                             {
                                 data?.Inputs ? (
                                     <>
-                                        <p>Nums :-</p>
+                                        <p>Test Case :-</p>
                                         <p>324</p>
                                     </>
                                 ) : ""

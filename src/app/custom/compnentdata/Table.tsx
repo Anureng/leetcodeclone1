@@ -2,11 +2,13 @@
 import React, { useEffect } from 'react';
 import useProblemData from '../Hooks/useProblemData';
 import Link from 'next/link';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 type Problem = {
     title: string;
     description: string;
-    difficulty: string; // Corrected the casing of 'difficulty'
+    difficulty: string;
 }
 
 const Table = () => {
@@ -22,12 +24,15 @@ const Table = () => {
 
 
     return (
-        <div>
-            <div className='bg-black w-screen h-screen text-white flex justify-center '>
-                <div className='flex flex-col  '>
+        <div className='bg-black h-screen space-y-48  '>
+
+            <Navbar />
+            <div className='  text-white flex justify-center  '>
+
+                <div className='flex flex-col   '>
                     {data.map((problem, index) => (
                         <Link key={index} href={` Details/${problem.id}`} >
-                            <div className="flex h-16 border w-96  bg-red-900  items-center justify-around">
+                            <div className="flex h-16 border-b  w-[63rem]   items-center justify-around">
                                 <p>{problem.Title}</p>
                                 <p>{problem.Difficulty}</p>
                                 <p>Solved</p>
@@ -41,6 +46,7 @@ const Table = () => {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -78,8 +78,14 @@ const RightPlayground = ({ param }: IPARAMS) => {
                     }
                 </div>
             </div>
+            <div className='mt-24 space-y-1'>
+                <div className='flex space-x-1 text-lg font-semibold'>
+                    <p>
+                        You can write code in code editor and it only support
+                    </p>
 
-            <div className='mt-24'>
+                    <p className='bg-gray-500 px-1 rounded-lg text-white'>JAVA SCRIPT</p>
+                </div>
                 <p className='text-xl font-semibold'>This is website is help to solve dsa Problem </p>
                 <p>
                     This website is build by Anurag Sidhu .
