@@ -24,11 +24,8 @@ const Table = () => {
 
 
     return (
-        <div className='bg-black h-screen space-y-48  '>
-
-            <Navbar />
+        <div className='bg-black h-screen space-y-48  flex items-center justify-center flex-col  '>
             <div className='  text-white flex justify-center  '>
-
                 <div className='flex flex-col   '>
                     {data.map((problem, index) => (
                         <Link key={index} href={` Details/${problem.id}`} >
