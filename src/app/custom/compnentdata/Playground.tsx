@@ -114,7 +114,7 @@ const Playground = ({ param }: IPARAMS) => {
                             extensions={[javascript()]}
                             onChange={updateData}
                             height="400px"
-                            width='700px'
+                            width='100vw'
                         />
                         <Button className={` p-1 rounded-xl mt-2   `} disabled={buttonLoading} onClick={singleDataFirebase}>{buttonLoading ? 'Loading...' : 'Submit Code'}</Button>
                     </div>

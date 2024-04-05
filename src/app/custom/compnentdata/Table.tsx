@@ -32,12 +32,7 @@ const Table = () => {
                             <div className="flex h-16 border-b  w-[63rem]   items-center justify-around">
                                 <p>{problem.Title}</p>
                                 <p>{problem.Difficulty}</p>
-                                <p>Solved</p>
-                                <p className='bg-gray-300 p-1 rounded-xl text-black'>
-                                    <Link href={problem.link}>
-                                        Link
-                                    </Link>
-                                </p>
+                                <p>Solve</p>
                             </div>
                         </Link>
                     ))}
