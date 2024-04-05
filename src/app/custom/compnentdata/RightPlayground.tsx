@@ -80,7 +80,7 @@ const RightPlayground = ({ param }: IPARAMS) => {
             </div>
 
             <div className='flex items-center space-x-3'>
-                <p>Link of the project</p>
+                <p>Link of the Problem</p>
                 <Link href={String(data?.link)} className='bg-gray-300 p-1 w-fit rounded-xl text-black'>
                     Link
                 </Link>
