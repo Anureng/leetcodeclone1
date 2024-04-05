@@ -93,7 +93,7 @@ const RightPlayground = ({ param }: IPARAMS) => {
 
                     <p className='bg-gray-500 px-1 rounded-lg text-white'>JAVA SCRIPT</p>
                 </div>
-                <p className='text-xl font-semibold'>This is website is help to solve dsa Problem </p>
+                <p className='text-xl font-semibold'>This  website is help to solve dsa Problem </p>
                 <p>
                     This website is build by Anurag Sidhu .
                 </p>

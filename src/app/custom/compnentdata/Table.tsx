@@ -4,6 +4,16 @@ import useProblemData from '../Hooks/useProblemData';
 import Link from 'next/link';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import {
+    Table as table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
 
 type Problem = {
     title: string;
@@ -25,19 +35,31 @@ const Table = () => {
 
     return (
         <div className='bg-black h-screen space-y-48  flex items-center justify-center flex-col  '>
-            <div className='  text-white flex justify-center  '>
-                <div className='flex flex-col   '>
+            <table>
+                <TableCaption>A list of All Problem</TableCaption>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead className="w-[400px]">Title</TableHead>
+                        <TableHead className="w-[400px]">Difficulty</TableHead>
+                        <TableHead>Method</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody className='text-white'>
                     {data.map((problem, index) => (
-                        <Link key={index} href={` Details/${problem.id}`} >
-                            <div className="flex h-16 border-b  w-[63rem]   items-center justify-around">
-                                <p>{problem.Title}</p>
-                                <p>{problem.Difficulty}</p>
-                                <p>Solve</p>
-                            </div>
-                        </Link>
+                        <TableRow key={index}>
+                            <TableCell className="font-medium">
+                                {problem.Title}
+                            </TableCell>
+                            <TableCell>{problem.Difficulty}</TableCell>
+                            <TableCell>
+                                <a href={`/Details/${problem.id}`}>
+                                    Solve
+                                </a>
+                            </TableCell>
+                        </TableRow>
                     ))}
-                </div>
-            </div>
+                </TableBody>
+            </table>
             <Footer />
         </div>
     );
